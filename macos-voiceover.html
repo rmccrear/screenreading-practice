@@ -9,6 +9,8 @@
 
 <body>
     <h1>Practice for MacOS VoiceOver</h1>
+    <p>Try and navigate this page and then click the button using only the screen reader. (No mouse!)</p>
+    <p>Reference [ <a href="https://support.apple.com/guide/voiceover/welcome/mac"> LINK </a> ]</p>
     <p>How to...</p>
     <ul>
         <li>Open VoiceOver: CTRL + F5</li>
@@ -17,6 +19,7 @@
         <li>Move back: VO + FORWARD ARROW</li>
         <li>Move into Web Content: VO + SHIFT + DOWN ARROW</li>
         <li>Read All: VO + A</li>
+        <li>To click the mouse, press VO-Shift-Space bar.</li>
     </ul>
     <p>To use VoiceOver in a webpage:
 
@@ -26,8 +29,22 @@
         <li>Move down to Web Content with VO + FORWARD ARROW</li>
         <li>Enter Web Content with VO + SHIFT + DOWN ARROW</li>
         <li>Navigate forwards and back with VO + ARROW KEYS</li>
+        <li>Navigate to a button and try clicking it with VO + SHIFT + SPACE</li>
     </ol>
+    <div>
+        <button id="vo-button" aria-label="Hello from ARIA">This is a button with and ARIA Label</button>
+    </div>
+    <p id="output">This is paragraph <br></p>
+    <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?w=200" alt="Hello from alt! This is a cat.">
 
+    <script>
+        let voButton = document.getElementById("vo-button");
+        let outputArea = document.getElementById("output");
+        function handleClick(){
+            outputArea.innerHTML += "You click the button" + "<br>";
+        }
+        voButton.addEventListener("click", handleClick);
+    </script>
 </body>
 
 </html>
