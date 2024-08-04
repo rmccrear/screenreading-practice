@@ -10,6 +10,23 @@
     <p>See reference: [ <a href="https://support.microsoft.com/en-us/windows/chapter-1-introducing-narrator-7fe8fd72-541f-4536-7658-bfc37ddaf9c6">LINK</a> ]</p>
     <p>To launch Narrator, press the Windows logo key + Ctrl + Enter. To stop the narrator, press these keys once more. </p>
     <p>Another way to launch Narrator: Press the Windows logo key + Ctrl + N to open Narrator settings, and then turn on the toggle under Use Narrator.</p>
-    <p>After launching Narrator, use TAB or the arrow keys to move. (SHIFT + TAB to move back.)</p>
+    <p>After launching Narrator, you can enter or exit SCAN MODE with CAPS LOCK + SPACEBAR</p>
+    <p>In SCAN MODE, use the TAB button or the ARROW KEYS to move. (Use SHIFT + TAB to move backwards.)</p>
+    <p>In SCAN MODE, use the SPACEBAR to "click" a button.</p>
+
+    <div>
+        <button id="vo-button" aria-label="Hello from ARIA">This is a button with and ARIA Label</button>
+    </div>
+    <p id="output">This is a paragraph. <br></p>
+    <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?w=200" alt="Hello from alt! This is a cat.">
+
+    <script>
+        let voButton = document.getElementById("vo-button");
+        let outputArea = document.getElementById("output");
+        function handleClick(){
+            outputArea.innerHTML += "You click the button" + "<br>";
+        }
+        voButton.addEventListener("click", handleClick);
+    </script>
 </body>
 </html>
