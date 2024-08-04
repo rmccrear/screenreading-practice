@@ -1,0 +1,10 @@
+/* Add some style to the button */
+.my-btn {
+  padding: 1em;
+  margin: 1em;
+  color: white;
+  background-color: blue;
+  border: solid 2px;
+  border-radius: 5px;
+  text-decoration: none;
+}

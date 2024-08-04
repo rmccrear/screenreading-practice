@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice for VoiceOver (Mac OS)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -32,18 +33,21 @@
         <li>Navigate to a button and try clicking it with VO + SHIFT + SPACE</li>
     </ol>
     <div>
-        <button id="vo-button" aria-label="Hello from ARIA">This is a button with and ARIA Label</button>
+        <button id="vo-button" aria-label="Hello from ARIA">This is a button with an ARIA Label</button>
+        <a id="vo-link-button" href="#" role="button" class="my-btn"> This functions as a button </a>
     </div>
     <p id="output">This is a paragraph. <br></p>
     <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?w=200" alt="Hello from alt! This is a cat.">
 
     <script>
         let voButton = document.getElementById("vo-button");
+        let voLinkButton = document.getElementById("vo-link-button");
         let outputArea = document.getElementById("output");
-        function handleClick(){
+        function handleClick() {
             outputArea.innerHTML += "You click the button" + "<br>";
         }
         voButton.addEventListener("click", handleClick);
+        voLinkButton.addEventListener("click", handleClick);
     </script>
 </body>
 
