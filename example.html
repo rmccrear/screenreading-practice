@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example of ARIA enabled website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+  </nav>
+  <h1>ARIA</h1>
+  <p>This is a demo of ARIA</p>
+  <div>
+    <span>Username: </span>
+    <!-- You can use aria-label to tell the screen reader what to read -->
+    <input type="text" aria-label="username"> <button>Submit</button>
+  </div>
+  <div>
+    <!-- You use a label tag instead of ARIA -->
+    <label>
+      Password:
+      <input type="password">
+    </label>
+    <span role="button" href="#" class="my-btn">Submit</span>
+  </div>
+</body>
+
+</html>
